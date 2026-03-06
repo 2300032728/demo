@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Project</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My Demo Website</h1>
+<p class="subtitle">Copy the code below</p>
+
+<div class="box">
+
+<h2>Sample Code</h2>
+
+<button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+<pre id="codeBlock"><code>
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/username/demo.git
+git push -u origin main
+</code></pre>
+
+</div>
+
+</div>
+
+<script>
+
+function copyCode() {
+
+const code = document.getElementById("codeBlock").innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code Copied!");
+
+}
+
+</script>
+
+</body>
+</html>
